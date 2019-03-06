@@ -1,19 +1,15 @@
 const initialState = {
-  id: null,
-  name: '',
-  username: '',
-  email: ''
+  postId: null,
+  body: ''
 };
 
 export default function reducer(state = initialState, { type, payload }) {
   switch(type) {
-    case 'FETCH_USER':
+    case 'FETCH_COMMENT':
       return {
         ...state,
-        id: payload.id,
-        name: payload.name,
-        username: payload.username,
-        email: payload.email
+        postId: payload.postId,
+        body: payload.body
       };
     default:
       return state;
