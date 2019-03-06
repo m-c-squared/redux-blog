@@ -13,6 +13,7 @@ const UserDetail = ({ user }) => {
   return (
     <>
     <div>
+      <h1> HELLO</h1>
       <p> {name} </p>
       <p> {email} </p>
       <p> {username} </p>

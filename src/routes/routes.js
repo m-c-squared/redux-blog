@@ -2,7 +2,7 @@ import Home from '../container/Home';
 // import FilteredPosts from './container/';
 // import RegisterUser from './container/';
 // import AllUsers from './container/';
-// import UserDetail from './container/';
+import UserDetail from '../components/user/UserDetail';
 // import PostDetail from './container/';
 
 export const ROUTES = {
@@ -10,7 +10,7 @@ export const ROUTES = {
     path:'/',
     Component: Home,
     linkTo:() => '/'
-  } 
+  },
   // FILTERED_POSTS:{
   //   path:'/',
   //   Component: FilteredPosts,
@@ -26,11 +26,11 @@ export const ROUTES = {
   //   Component: AllUsers,
   //   linkTo:() => '/users/allUsers'
   // }, 
-  // USER_DETAIL:{
-  //   path:'/',
-  //   Component: UserDetail,
-  //   linkTo:() => '/user/detail'
-  // },
+  USER_DETAIL:{
+    path:'/user/:id',
+    Component: UserDetail,
+    linkTo:() => '/user/detail'
+  },
   // POST_DETAIL:{
   //   path:'/',
   //   Component: PostDetail,

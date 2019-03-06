@@ -10,6 +10,7 @@ export default function App() {
     <Header />
       <h1>Redux Blog</h1>
       <Route exact component={ROUTES.HOME.Component} path={ROUTES.HOME.path} />
+      <Route exact component={ROUTES.USER_DETAIL.Component} path={ROUTES.USER_DETAIL.path} />
     </>
     </Router>
     
