@@ -1,1 +1,0 @@
-import { getUsers} from '../services/'

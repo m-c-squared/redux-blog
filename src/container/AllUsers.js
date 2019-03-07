@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { getAllUsers } from '../selectors/user';
 import Users from '../components/user/Users';
-import { fetchUsers } from '../>>>>to actions';
+import { fetchUsers } from '../actions/users';
 
 class AllUsers extends PureComponent {
   static propTypes = {
@@ -29,7 +29,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   fetch() {
-    dispatch(fetchUser());
+    dispatch(fetchUsers());
   }
 
 });
