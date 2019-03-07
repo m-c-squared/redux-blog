@@ -1,15 +1,13 @@
 import reducer from './users';
-import { FETCH_USER } from '../actions/users';
+import { FETCH_USER, FETCH_USERS } from '../actions/users';
 
 describe('Users reducers', () => {
   it('handles a fetch user action', () => {
     const state = {
-      users: {
-        id: null,
-        name: '',
-        username: '',
-        email: ''
-      }
+      id: null,
+      name: '',
+      username: '',
+      email: ''
     };
     const fetchedState = reducer(state, {
       type: FETCH_USER,
@@ -20,14 +18,44 @@ describe('Users reducers', () => {
         email: 'mc2email@com'
       }
     });
-    console.log('fetched state', fetchedState);
-    // expect(fetchedState).toEqual({
-    //   users: {
-    //     id: 2,
-    //     name: 'mc2',
-    //     username: 'usermc2',
-    //     email: 'mc2email@com'
-    //   }
-    // });
+    expect(fetchedState).toEqual({
+      id: 2,
+      name: 'mc2',
+      username: 'usermc2',
+      email: 'mc2email@com'
+    });
+  });
+
+  it('handles a fetch users action', () => {
+    const state = {
+      users: []
+    };
+    const fetchedState = reducer(state, {
+      type: FETCH_USERS,
+      payload: [{
+        id: 1,
+        name: 'Leanne Graham',
+        username: 'Bret',
+        email: 'Sincere@april.biz',
+      },
+      {
+        id: 2,
+        name: 'Ervin Howell',
+        username: 'Antonette',
+        email: 'Shanna@melissa.tv',
+      }]
+    });
+    expect(fetchedState).toEqual({
+      users:
+        [{ id: 1,
+          name: 'Leanne Graham',
+          username: 'Bret',
+          email: 'Sincere@april.biz' },
+        { id: 2,
+          name: 'Ervin Howell',
+          username: 'Antonette',
+          email: 'Shanna@melissa.tv'
+        }]
+    });
   });
 });
