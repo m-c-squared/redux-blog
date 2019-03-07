@@ -1,13 +1,16 @@
 const initialState = {
-  id: null,
-  name: '',
-  username: '',
-  email: ''
+  users: [],
+  userDetail: { id: null, name: '', username: '', email: '' }
 };
 
 export default function reducer(state = initialState, { type, payload }) {
   switch(type) {
     case 'FETCH_USER':
+      return {
+        ...state,
+        users: payload
+      };
+    case 'FETCH_USER_DETAIL':
       return {
         ...state,
         id: payload.id,

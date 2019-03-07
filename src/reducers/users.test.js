@@ -3,10 +3,12 @@ import reducer from './users';
 describe('Users reducers', () => {
   it('handles a fetch user action', () => {
     const state = {
-      id: null,
-      name: '',
-      username: '',
-      email: ''
+      users: {
+        id: null,
+        name: '',
+        username: '',
+        email: ''
+      }
     };
     const fetchedState = reducer(state, {
       type: 'FETCH_USER',
@@ -18,10 +20,12 @@ describe('Users reducers', () => {
       }
     });
     expect(fetchedState).toEqual({
-      id: 2,
-      name: 'mc2',
-      username: 'usermc2',
-      email: 'mc2email@com'
+      users: {
+        id: 2,
+        name: 'mc2',
+        username: 'usermc2',
+        email: 'mc2email@com'
+      }
     });
   });
 });

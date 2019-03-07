@@ -3,8 +3,10 @@ import reducer from './comments';
 describe('Comments reducer', () => {
   it('handles a fetch comment action', () => {
     const state = {
-      postId: null,
-      body: ''
+      comments: {
+        postId: null,
+        body: ''
+      }
     };
     const fetchedState = reducer(state, {
       type: 'FETCH_COMMENT',
@@ -14,8 +16,10 @@ describe('Comments reducer', () => {
       }
     });
     expect(fetchedState).toEqual({
-      postId: 2,
-      body: 'blahblahblah'
+      comments: {
+        postId: 2,
+        body: 'blahblahblah'
+      }
     });
   });
 });

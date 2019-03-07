@@ -3,9 +3,11 @@ import reducer from './posts';
 describe('Posts reducer', () => {
   it('handles a fetch post action', () => {
     const state = {
-      userId: '',
-      title: '',
-      body: ''
+      posts: {
+        userId: '',
+        title: '',
+        body: ''
+      }
     };
     const fetchedState = reducer(state, {
       type: 'FETCH_POST',
@@ -16,9 +18,11 @@ describe('Posts reducer', () => {
       }
     });
     expect(fetchedState).toEqual({
-      userId: 'mc2',
-      title: 'blah',
-      body: 'blahblahblah'
+      posts: {
+        userId: 'mc2',
+        title: 'blah',
+        body: 'blahblahblah'
+      }
     });
   });
 });
