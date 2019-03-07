@@ -5,7 +5,7 @@ import { ROUTES } from '../../routes/routes';
 
 const UserDetail = ({ userDetail }) => {
   if(!userDetail) {
-    return <Redirect to={ROUTES.HOME.linkTo()} />
+    return <Redirect to={ROUTES.HOME.linkTo()} />;
   }
 
   const { id, name, email, username } = userDetail;
@@ -24,7 +24,7 @@ const UserDetail = ({ userDetail }) => {
 };
 
 UserDetail.propTypes = {
-  user: PropTypes.object.isRequired
+  userDetail: PropTypes.object.isRequired
 };
 
 export default UserDetail;
