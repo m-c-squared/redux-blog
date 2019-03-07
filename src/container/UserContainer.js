@@ -7,12 +7,19 @@ import PropTypes from 'prop-types';
 
 class UserContainer extends PureComponent {
   static propTypes = {
-    userDetail: PropTypes.object,
-    fetch: PropTypes.func
+    userDetail: PropTypes.object.isRequired,
+    fetch: PropTypes.func.isRequired,
+    match: PropTypes.object.isRequired
   };
 
   componentDidMount() {
     this.props.fetch();
+  }
+
+  componentDidUpdate(prevProps) {
+    if(this.props.match.params.id !== prevProps.match.params.id) {
+      this.props.fetch();
+    }
   }
 
   render() {
