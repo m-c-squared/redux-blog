@@ -2,6 +2,7 @@ import Home from '../container/Home';
 // import FilteredPosts from './container/';
 // import RegisterUser from './container/';
 import AllUsers from '../container/AllUsers';
+// import AllPosts from '../container/AllPosts';
 import UserContainer from '../container/UserContainer';
 // import PostDetail from './container/';
 
@@ -25,7 +26,12 @@ export const ROUTES = {
     path:'/allUsers',
     Component: AllUsers,
     linkTo:() => '/users/allUsers'
-  }, 
+  },
+  // ALL_POSTS:{
+  //   path:'/allPosts',
+  //   Component: AllPosts,
+  //   linkTo:() => '/posts/allPosts'
+  // },
   USER_CONTAINER:{
     path:'/user/:id',
     Component: UserContainer,

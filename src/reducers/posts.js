@@ -15,9 +15,11 @@ export default function reducer(state = initialState, { type, payload }) {
     case FETCH_POST:
       return {
         ...state,
-        userId: payload.userId,
-        title: payload.title,
-        body: payload.body
+        postDetail: {
+          userId: payload.userId,
+          title: payload.title,
+          body: payload.body
+        }
       };
     default:
       return state;
