@@ -3,17 +3,18 @@ import PropTypes from 'prop-types';
 import { Redirect } from 'react-router-dom';
 import { ROUTES } from '../../routes/routes';
 
-const UserDetail = ({ user }) => {
-  if(!user) {
+const UserDetail = ({ userDetail }) => {
+  if(!userDetail) {
     return <Redirect to={ROUTES.HOME.linkTo()} />
   }
 
-  const { name, email, username } = user;
+  const { id, name, email, username } = userDetail;
 
   return (
     <>
     <div>
-      <h1> HELLO</h1>
+      <h1> USER </h1>
+      <p> {id} </p>
       <p> {name} </p>
       <p> {email} </p>
       <p> {username} </p>
