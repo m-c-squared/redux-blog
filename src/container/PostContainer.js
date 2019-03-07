@@ -17,7 +17,6 @@ class PostContainer extends PureComponent {
   }
 
   componentDidUpdate(prevProps) {
-    console.log('hello', this.props.match.params.id);
     if(this.props.match.params.id !== prevProps.match.params.id) {
       this.props.fetch();
     }

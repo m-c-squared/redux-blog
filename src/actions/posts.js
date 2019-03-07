@@ -8,6 +8,6 @@ export const fetchPosts = () => ({
 
 export const FETCH_POST = 'FETCH_POST';
 export const fetchPost = id => ({
-  type: FETCH_POSTS,
+  type: FETCH_POST,
   payload: getPost(id)
 });
