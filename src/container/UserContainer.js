@@ -27,10 +27,9 @@ const mapStateToProps = (state) => ({
   userDetail: getUserById(state)
 });
 
-const mapDispatchToProps = (dispatch, id) => ({
+const mapDispatchToProps = (dispatch, props) => ({
   fetch() {
-    console.log('id', id);
-    // dispatch(fetchUser(id))
+    dispatch(fetchUser(props.match.params.id))
   }
 });
 

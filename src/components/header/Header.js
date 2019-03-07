@@ -8,6 +8,7 @@ export default function Header() {
     <header>
       <nav>
         <Link to={ROUTES.HOME.linkTo()}>Home</Link>
+        <Link to={ROUTES.ALL_USERS.linkTo()}>All Users</Link>
         <Link to={ROUTES.USER_CONTAINER.linkTo()}>User Detail</Link>
       </nav>
     </header>
