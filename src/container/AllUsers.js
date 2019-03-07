@@ -1,32 +1,40 @@
 import React, { PureComponent } from 'react';
-import store from '../store';
-import { getAllUsers } from './selectors/not-hookedup'
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { getAllUsers } from '../selectors/user';
 import Users from '../components/user/Users';
+import { fetchUsers } from '../>>>>to actions';
 
-export default class AllUsers extends PureComponent {
-  state= {
-    user: [],
-    unsubscribe: null
-  }
-
-  updateState = () => {
-    const currentReduxState = store.getState();
-    const users = getAllUsers(currentReduxState)
-    this.setState({ users});
-  }
+class AllUsers extends PureComponent {
+  static propTypes = {
+    users: PropTypes.array.isRequired,
+    fetch: PropTypes.func.isRequired
+  };
+    
   
   componentDidMount() { 
-    this.updateState();
-    const unsubscribe = store.subscribe(() => {
-      this.updateState();
-    });
-    this.setState({ unsubscribe });
+    this.props.fetch();
   }
 
-  componentWillUnmount() {
-    this.state.unsubscribe();
-  }
   render() {
-    return <Users title="All Users" users={this.state.users} />
+    return (
+      <Users {...this.props}/>
+    );
   }
 }
+const mapStateToProps = state => ({
+  users: getAllUsers(state)  
+
+});
+
+const mapDispatchToProps = dispatch => ({
+  fetch() {
+    dispatch(fetchUser());
+  }
+
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(AllUsers);
