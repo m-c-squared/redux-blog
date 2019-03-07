@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
-const User = ({ user }) => {
-  
+const User = ({ user }) => {  
   return (
+    <>
     <li>
       {user.name}
     </li>
+    </>
   );
 };
 
