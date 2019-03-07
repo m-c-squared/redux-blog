@@ -4,6 +4,7 @@ import Home from '../container/Home';
 import AllUsers from '../container/AllUsers';
 import AllPosts from '../container/AllPosts';
 import UserContainer from '../container/UserContainer';
+// import PostContainer from '../container/PostContainer';
 // import PostDetail from './container/';
 
 export const ROUTES = {
@@ -36,11 +37,11 @@ export const ROUTES = {
     path:'/users/:id',
     Component: UserContainer,
     linkTo: (id) => `/users/${id}`
-  },
-  // POST_DETAIL:{
-  //   path:'/',
-  //   Component: PostDetail,
-  //   linkTo:() => '/post/postDetail'
+  }
+  // POST_CONTAINER:{
+  //   path:'/post/:id',
+  //   Component: PostContainer,
+  //   linkTo: (id) => `/post/${id}`
   // }
 
 
