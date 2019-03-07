@@ -1,13 +1,16 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { getAllUsers } from '../selectors/user';
+import { getAllUsers, getUserById } from '../selectors/user';
 import Users from '../components/user/Users';
 import { fetchUsers } from '../actions/users';
+
+
 
 class AllUsers extends PureComponent {
   static propTypes = {
     users: PropTypes.array.isRequired,
+    // userDetail: PropTypes.object.isRequired,
     fetch: PropTypes.func.isRequired
   };
     
@@ -22,8 +25,9 @@ class AllUsers extends PureComponent {
     );
   }
 }
-const mapStateToProps = state => ({
-  users: getAllUsers(state)  
+const mapStateToProps = (state) => ({
+  users: getAllUsers(state),
+  // userDetail: getUserById(state, props.match.params.id)
 
 });
 
@@ -31,6 +35,7 @@ const mapDispatchToProps = dispatch => ({
   fetch() {
     dispatch(fetchUsers());
   }
+  
 
 });
 

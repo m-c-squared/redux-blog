@@ -29,7 +29,7 @@ export const ROUTES = {
   USER_DETAIL:{
     path:'/user/:id',
     Component: UserDetail,
-    linkTo:() => '/user/detail'
+    linkTo: (id) => `/user/${id}`
   },
   // POST_DETAIL:{
   //   path:'/',
