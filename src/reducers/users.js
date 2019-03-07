@@ -1,4 +1,5 @@
 import { FETCH_USER, FETCH_USERS } from '../actions/users';
+
 const initialState = {
   users: [],
   userDetail: { id: null, name: '', username: '', email: '' }

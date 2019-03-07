@@ -13,7 +13,17 @@ export const getPosts = () => {
     .then(res => res.json());
 };
 
-export const getComments = postId => {
-  return fetch(`https://jsonplaceholder.typicode.com/comments/${postId}`)
+export const getPost = postId => {
+  return fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`)
+    .then(res => res.json());
+};
+
+export const getComments = () => {
+  return fetch('https://jsonplaceholder.typicode.com/comments')
+    .then(res => res.json());
+};
+
+export const getComment = commentId => {
+  return fetch(`https://jsonplaceholder.typicode.com/comments/${commentId}`)
     .then(res => res.json());
 };
