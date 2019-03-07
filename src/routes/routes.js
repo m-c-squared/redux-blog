@@ -2,7 +2,7 @@ import Home from '../container/Home';
 // import FilteredPosts from './container/';
 // import RegisterUser from './container/';
 import AllUsers from '../container/AllUsers';
-// import AllPosts from '../container/AllPosts';
+import AllPosts from '../container/AllPosts';
 import UserContainer from '../container/UserContainer';
 // import PostDetail from './container/';
 
@@ -23,19 +23,19 @@ export const ROUTES = {
   //   linkTo:() => '/register'
   // }, 
   ALL_USERS:{
-    path:'/allUsers',
+    path:'/users',
     Component: AllUsers,
-    linkTo:() => '/users/allUsers'
+    linkTo: () => '/users'
   },
-  // ALL_POSTS:{
-  //   path:'/allPosts',
-  //   Component: AllPosts,
-  //   linkTo:() => '/posts/allPosts'
-  // },
+  ALL_POSTS:{
+    path:'/posts',
+    Component: AllPosts,
+    linkTo: () => '/posts'
+  },
   USER_CONTAINER:{
-    path:'/user/:id',
+    path:'/users/:id',
     Component: UserContainer,
-    linkTo: (id) => `/user/${id}`
+    linkTo: (id) => `/users/${id}`
   },
   // POST_DETAIL:{
   //   path:'/',
