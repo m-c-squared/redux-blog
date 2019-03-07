@@ -1,14 +1,18 @@
+import { FETCH_USER, FETCH_USERS } from '../actions/users';
+
 const initialState = {
-  users:  [],
-  id: null,
-  name: '',
-  username: '',
-  email: ''
+  users: [],
+  userDetail: { id: null, name: '', username: '', email: '' }
 };
 
 export default function reducer(state = initialState, { type, payload }) {
   switch(type) {
-    case 'FETCH_USER':
+    case FETCH_USERS:
+      return {
+        ...state,
+        users: payload
+      };
+    case FETCH_USER:
       return {
         ...state,
         id: payload.id,
