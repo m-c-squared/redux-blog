@@ -4,7 +4,8 @@ describe('Posts reducer', () => {
   it('handles a fetch post action', () => {
     const state = {
       postDetail: {
-        userId: '',
+        id: null,
+        userId: null,
         title: '',
         body: ''
       }
@@ -12,6 +13,7 @@ describe('Posts reducer', () => {
     const fetchedState = reducer(state, {
       type: 'FETCH_POST',
       payload: {
+        id: 1,
         userId: 'mc2',
         title: 'blah',
         body: 'blahblahblah'
@@ -19,6 +21,7 @@ describe('Posts reducer', () => {
     });
     expect(fetchedState).toEqual({
       postDetail: {
+        id: 1,
         userId: 'mc2',
         title: 'blah',
         body: 'blahblahblah'
@@ -29,7 +32,8 @@ describe('Posts reducer', () => {
   it('handles a fetch posts action', () => {
     const state = {
       posts: [{
-        userId: '',
+        id: null,
+        userId: null,
         title: '',
         body: ''
       }]
@@ -37,6 +41,7 @@ describe('Posts reducer', () => {
     const fetchedState = reducer(state, {
       type: 'FETCH_POSTS',
       payload: [{
+        id: 1,
         userId: 'mc2',
         title: 'blah',
         body: 'blahblahblah'
@@ -44,6 +49,7 @@ describe('Posts reducer', () => {
     });
     expect(fetchedState).toEqual({
       posts: [{
+        id: 1,
         userId: 'mc2',
         title: 'blah',
         body: 'blahblahblah'
