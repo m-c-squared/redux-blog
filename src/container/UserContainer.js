@@ -6,19 +6,19 @@ import { fetchUser } from '../actions/users';
 import PropTypes from 'prop-types';
 
 class UserContainer extends PureComponent {
-static propTypes = {
-  userDetail: PropTypes.object,
-  fetch: PropTypes.func
-}
+  static propTypes = {
+    userDetail: PropTypes.object,
+    fetch: PropTypes.func
+  };
 
   componentDidMount() {
     this.props.fetch();
   }
 
   render() {
-    return(
+    return (
       <UserDetail {...this.props} />
-    )
+    );
   }
 }
 
@@ -29,7 +29,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch, props) => ({
   fetch() {
-    dispatch(fetchUser(props.match.params.id))
+    dispatch(fetchUser(props.match.params.id));
   }
 });
 

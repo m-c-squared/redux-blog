@@ -3,6 +3,5 @@ export const getAllUsers = state => {
 };
 
 export const getUserById = state => { 
-  console.log('return', state.users);
   return state.users.userDetail;
 };
