@@ -1,8 +1,22 @@
-const { getUsers, getPosts, getComments } = require('./blogApiServices');
+const { getUser, getUsers, getPosts, getComments } = require('./blogApiServices');
 
 jest.mock('./blogApiServices');
 
 describe('blogApi services', () => {
+  it('gets a user', () => {
+    return getUser()
+      .then(user => {
+        expect(user).toEqual([
+          {
+            id: 1,
+            name: 'Leanne Graham',
+            username: 'Bret',
+            email: 'Sincere@april.biz',
+          }
+        ]);
+      });
+  });
+
   it('gets a list of users', () => {
     return getUsers()
       .then(users => {

@@ -1,3 +1,14 @@
+export const getUser = () => {
+  return Promise.resolve([
+    {
+      id: 1,
+      name: 'Leanne Graham',
+      username: 'Bret',
+      email: 'Sincere@april.biz',
+    }
+  ]);
+};
+
 export const getUsers = () => {
   return Promise.resolve([
     {
