@@ -1,11 +1,18 @@
+import { FETCH_COMMENT, FETCH_COMMENTS } from '../actions/comments';
+
 const initialState = {
-  postId: null,
-  body: ''
+  comments: [],
+  commentDetail: { postId: null, body: '' }
 };
 
 export default function reducer(state = initialState, { type, payload }) {
   switch(type) {
-    case 'FETCH_COMMENT':
+    case FETCH_COMMENTS:
+      return {
+        ...state,
+        comments: payload
+      };
+    case FETCH_COMMENT:
       return {
         ...state,
         postId: payload.postId,

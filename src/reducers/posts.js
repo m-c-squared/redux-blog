@@ -1,12 +1,18 @@
+import { FETCH_POST, FETCH_POSTS } from '../actions/posts';
+
 const initialState = {
-  userId: null,
-  title: '',
-  body: ''
+  posts: [],
+  postDetail: { userId: null, title: '', body: '' }
 };
 
 export default function reducer(state = initialState, { type, payload }) {
   switch(type) {
-    case 'FETCH_POST':
+    case FETCH_POSTS:
+      return {
+        ...state,
+        posts: payload
+      };
+    case FETCH_POST:
       return {
         ...state,
         userId: payload.userId,
