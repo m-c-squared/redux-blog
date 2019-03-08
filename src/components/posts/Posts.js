@@ -12,18 +12,30 @@ const PostList = styles.ul`
   }
 `;
 
+const PostItem = styles(Link)`
+  @media (min-width: 374px) {
+    font-family: 'Roboto', san-serif;
+    color: rgb(93, 95, 96);
+  }
+`;
 
+
+const PostDes = styles.p`
+  @media (min-width: 374px) {
+    font-family: 'Roboto', san-serif;
+    color: rgb(93, 95, 96);
+  }
+`;
 
 const Posts = ({ posts }) => {
   const postList = posts.map((post, i) => {
     return (
       <li key={i}>
-        <Link key={post.id} to={ROUTES.POST_CONTAINER.linkTo(post.id)}>
-          <h4> TITLE </h4>
+        <PostItem key={post.id} to={ROUTES.POST_CONTAINER.linkTo(post.id)}>
           <p> {post.title}</p>
-        </Link>
-        <p>{post.body}</p>
-      </li>
+        </PostItem>
+        <PostDes>{post.body}</PostDes>
+      </li >
     );
   });
 
