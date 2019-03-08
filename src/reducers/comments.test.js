@@ -1,4 +1,5 @@
 import reducer from './comments';
+import { FETCH_COMMENT, FETCH_COMMENTS } from '../actions/comments';
 
 describe('Comments reducer', () => {
   it('handles a fetch comment action', () => {
@@ -9,7 +10,7 @@ describe('Comments reducer', () => {
       }
     };
     const fetchedState = reducer(state, {
-      type: 'FETCH_COMMENT',
+      type: FETCH_COMMENT,
       payload: {
         postId: 2,
         body: 'blahblahblah'
@@ -31,7 +32,7 @@ describe('Comments reducer', () => {
       }]
     };
     const fetchedState = reducer(state, {
-      type: 'FETCH_COMMENTS',
+      type: FETCH_COMMENTS,
       payload: [{
         postId: 2,
         body:'blahblahblah'

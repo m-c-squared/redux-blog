@@ -2,6 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Redirect } from 'react-router-dom';
 import { ROUTES } from '../../routes/routes';
+import { Detail } from '../posts/PostDetail';
+import styles from 'styled-components';
+
+const UserTitle = styles(Detail)`
+@media (min-width: 374px) {
+  h1{
+    color: rgb(93, 95, 96);
+    font-family: 'Roboto', san-serif;
+  }
+}
+`;
 
 const UserDetail = ({ userDetail, posts }) => {
   const listOfPosts = posts.map((post, i) => {
@@ -14,18 +25,17 @@ const UserDetail = ({ userDetail, posts }) => {
     return <Redirect to={ROUTES.HOME.linkTo()} />;
   }
 
-  const { id, name, email, username } = userDetail;
+  const { name, email, username } = userDetail;
 
   return (
     <>
-    <div>
-      <h1> USER </h1>
-      <p> {id} </p>
-      <p> {name} </p>
-      <p> {email} </p>
-      <p> {username} </p>
-      <p>{listOfPosts}</p>
-    </div>
+      <UserTitle>
+        <h1>USER</h1>
+        <p>name: {name}</p>
+        <p>email: {email}</p>
+        <p>username: {username}</p>
+        <p>List of Posts: {listOfPosts}</p>
+      </UserTitle>
     </>
   );
 };
