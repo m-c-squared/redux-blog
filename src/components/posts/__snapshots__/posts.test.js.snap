@@ -2,7 +2,7 @@
 
 exports[`Posts matches a snapshot 1`] = `
 <ul>
-  <li>s
+  <li>
     <a
       href="/posts/1"
       onClick={[Function]}

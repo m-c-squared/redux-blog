@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 const User = ({ user }) => {  
   return (
     <>
-    <li>s
+    <li>
       {user.name}
     </li>
     </>

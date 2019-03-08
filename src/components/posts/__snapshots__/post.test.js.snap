@@ -2,7 +2,7 @@
 
 exports[`Post matches a snapshot 1`] = `
 <li>
-  <h2>s
+  <h2>
     5
   </h2>
   <h3>
