@@ -1,11 +1,10 @@
 import Home from '../container/home/Home';
-// import FilteredPosts from './container/';
 // import RegisterUser from './container/';
 import AllUsers from '../container/AllUsers';
-import AllPosts from '../container/AllPosts';
 import UserContainer from '../container/UserContainer';
 import AllComments from '../container/AllComments';
 import PostContainer from '../container/PostContainer';
+import PostsSearch from '../components/posts/PostsSearch';
 
 export const ROUTES = {
   HOME:{
@@ -13,11 +12,6 @@ export const ROUTES = {
     Component: Home,
     linkTo:() => '/'
   },
-  // FILTERED_POSTS:{
-  //   path:'/',
-  //   Component: FilteredPosts,
-  //   linkTo:() => '/filteredPosts'
-  // },
   // REGISTERED_USER:{
   //   path:'/',
   //   Component: RegisterUser,
@@ -30,7 +24,7 @@ export const ROUTES = {
   },
   ALL_POSTS:{
     path:'/posts',
-    Component: AllPosts,
+    Component: PostsSearch,
     linkTo: () => '/posts'
   },
   USER_CONTAINER:{
