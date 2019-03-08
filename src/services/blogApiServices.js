@@ -8,6 +8,11 @@ export const getUsers = () => {
     .then(res => res.json());
 };
 
+export const getUserPosts = userId => {
+  return fetch(`https://jsonplaceholder.typicode.com/posts?userId=${userId}`)
+    .then(res => res.json());
+};
+
 export const getPosts = () => {
   return fetch('https://jsonplaceholder.typicode.com/posts')
     .then(res => res.json());
