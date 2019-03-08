@@ -1,6 +1,6 @@
 import { createStore, applyMiddleware } from 'redux';
 import { middleware } from '../middleware';
-import { fetchComments, FETCH_COMMENTS } from './comments';
+import { fetchComments, FETCH_COMMENTS, FETCH_COMMENTS_LOADING } from './comments';
 
 jest.mock('../services/blogApiServices');
 
@@ -15,7 +15,7 @@ describe('Comments actions', () => {
     store.dispatch(fetchComments());
     setTimeout(() => {
       expect(reducer).toHaveBeenCalledWith(undefined, {
-        type: 'LOAD_START'
+        type: FETCH_COMMENTS_LOADING
       });
       expect(reducer).toHaveBeenCalledWith(undefined, {
         type: FETCH_COMMENTS,
