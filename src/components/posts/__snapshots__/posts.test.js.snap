@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Posts matches a snapshot 1`] = `
+<ul>
+  <a
+    href="/posts/1"
+    onClick={[Function]}
+  >
+     
+    asperiores ea ipsam voluptatibus modi minima quia sinta
+     
+  </a>
+  <a
+    href="/posts/21"
+    onClick={[Function]}
+  >
+     
+    ullam ut quidem id aut vel consequunt
+     
+  </a>
+</ul>
+`;

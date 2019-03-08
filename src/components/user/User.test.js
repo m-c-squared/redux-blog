@@ -1,16 +1,18 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Header from './Header';
+import User from './User';
 import { MemoryRouter } from 'react-router-dom';
 
-describe('Header', () => {
+describe('User', () => {
   it('matches a snapshot', () => {
+    const user = {
+      name: 'Chelsey Dietrich'
+    };
     const tree = renderer.create(
       <MemoryRouter>
-        <Header />
+        <User user={user}/>
       </MemoryRouter>
     ).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });
-

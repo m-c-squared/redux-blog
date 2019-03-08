@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`users matches a snapshot 1`] = `
+<ul>
+  <a
+    href="/users/23"
+    onClick={[Function]}
+  >
+     
+    Clementina DuBuque
+     
+  </a>
+  <a
+    href="/users/5"
+    onClick={[Function]}
+  >
+     
+    Kurtis Weissnat
+     
+  </a>
+</ul>
+`;
