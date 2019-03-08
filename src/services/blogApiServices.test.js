@@ -1,4 +1,4 @@
-const { getUser, getUsers, getPosts, getComments, getUserPosts } = require('./blogApiServices');
+const { getUser, getUsers, getPosts, getComments, getUserPosts, getPost } = require('./blogApiServices');
 
 jest.mock('./blogApiServices');
 
@@ -71,7 +71,6 @@ describe('blogApi services', () => {
       });
   });
 
-
   it('gets posts by user id', () => {
     return getUserPosts()
       .then(posts => {
@@ -91,5 +90,20 @@ describe('blogApi services', () => {
         ]);
       });
   });
+
+  it('gets posts by postId', () => {
+    return getPost()
+      .then(posts => {
+        expect(posts).toEqual([
+          {
+            userId: 1,
+            title: 'sunt aut facere repellat provident occaecati excepturi optio reprehenderit',
+            body: 'quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto'
+          }
+        ]);
+      });
+  });
+
+
 
 });
