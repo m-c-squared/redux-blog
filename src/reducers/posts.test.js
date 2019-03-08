@@ -1,4 +1,5 @@
 import reducer from './posts';
+import { FETCH_POST, FETCH_POSTS } from '../actions/posts';
 
 describe('Posts reducer', () => {
   it('handles a fetch post action', () => {
@@ -11,7 +12,7 @@ describe('Posts reducer', () => {
       }
     };
     const fetchedState = reducer(state, {
-      type: 'FETCH_POST',
+      type: FETCH_POST,
       payload: {
         id: 1,
         userId: 'mc2',
@@ -39,7 +40,7 @@ describe('Posts reducer', () => {
       }]
     };
     const fetchedState = reducer(state, {
-      type: 'FETCH_POSTS',
+      type: FETCH_POSTS,
       payload: [{
         id: 1,
         userId: 'mc2',

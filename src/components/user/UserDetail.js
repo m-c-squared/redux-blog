@@ -19,11 +19,11 @@ const UserDetail = ({ userDetail, posts }) => {
   return (
     <>
     <div>
-      <h1> USER </h1>
-      <p> {id} </p>
-      <p> {name} </p>
-      <p> {email} </p>
-      <p> {username} </p>
+      <h1>USER</h1>
+      <p>{id}</p>
+      <p>{name}</p>
+      <p>{email}</p>
+      <p>{username}</p>
       <p>{listOfPosts}</p>
     </div>
     </>
