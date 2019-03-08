@@ -8,14 +8,14 @@ import styled from 'styled-components';
 
 
 const HomePage = styled.section`
-@media (min-width: 374px) {
-    background-color:rgb(242, 243, 244);
-    height: 100vh;
-    padding: 0;
+  @media (min-width: 374px) {
+      background-color:rgb(242, 243, 244);
+      height: 100vh;
+      padding: 0;
   }
-@media (min-width: 700px) {
-    background-color:rgb(242, 243, 244);
-    height: 100vh;
+  @media (min-width: 700px) {
+      background-color:rgb(242, 243, 244);
+      height: 100vh;
   }
 `;
 

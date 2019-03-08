@@ -111,4 +111,4 @@ Users.propTypes =  {
   users: PropTypes.array.isRequired
 };
 
-export default Users; 
+export default Users;
