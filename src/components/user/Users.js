@@ -13,18 +13,60 @@ const UserLink = styles.ul`
     grid-column-gap: 10px;
     padding: 30px 10px 30px 10px;
 }
+@media (min-width: 700px) {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+    padding: 30px 10px 30px 10px;
+}
 `;  
 
 const UserList = styles(Link)`
+@media (min-width: 374px) {
   font-family: 'Roboto', san serif;
   color: rgb(93, 95, 96);
   overflow-wrap: word-break;
+}
+@media (min-width: 374px) {
+  font-size: 30px;
+  padding: 10px;
+  text-align: center;
+}
 `;
 
 const UserTitle = styles.h1`
+@media (min-width: 374px) {
   margin-top: 1.5em;
   color: rgb(93, 95, 96);
   font-family: 'Roboto', san serif;
+}
+`;
+const UserImage = styles.img`
+@media (min-width: 374px) and (max-width: 600px) {
+  img {
+    display: none;
+    }
+    p {
+    display: none;
+    }
+  }
+  width: 100%;
+  height: 40vh;
+  display: block;
+  margin-right:auto;
+  margin-left: auto;
+`;
+
+const ImageList = styles.ul`
+@media (min-width: 374px) and (max-width: 600px) {
+  ul {
+    display: none;
+    list-style: none;
+    padding: 0;
+    }
+  }
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding: 0;
 `;
 
 const Users = ({ users }) => {
@@ -33,6 +75,10 @@ const Users = ({ users }) => {
   return (
     <>
     <UserTitle> OUR CLIENTS </UserTitle>
+    <ImageList>
+      <UserImage src="/assets/rawpixel-411170-unsplash.jpg"></UserImage>
+      <UserImage src="/assets/rawpixel-983649-unsplash.jpg"></UserImage>
+    </ImageList>
     <UserLink>
       {userList}
     </UserLink>

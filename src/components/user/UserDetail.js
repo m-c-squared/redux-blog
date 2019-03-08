@@ -25,7 +25,7 @@ const UserDetail = ({ userDetail, posts }) => {
     return <Redirect to={ROUTES.HOME.linkTo()} />;
   }
 
-  const { id, name, email, username } = userDetail;
+  const { name, email, username } = userDetail;
 
   return (
     <>

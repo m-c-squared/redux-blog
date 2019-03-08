@@ -16,6 +16,23 @@ export const Detail = styles.div`
   p {
     font-size: 12px;
   }
+  @media (min-width: 600px) {
+    font-family: 'Roboto', san-serif;
+    color: rgb(93, 95, 96);
+    margin-top: 4em;
+    }
+    li {
+      list-style: none;
+    }
+    p {
+      font-size: 30px;
+    }
+    h4 {
+      font-size: 40px;
+    }
+    h1 {
+      font-size: 50px;
+    }
 `;
 
 const PostDetail = ({ postDetail, comments }) => {

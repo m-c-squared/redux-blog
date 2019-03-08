@@ -21,6 +21,12 @@ export const NavStyle = styles(Link)`
 @media (min-width: 413px) {
   padding: 10px 40px 10px 35px;
 }
+
+@media (min-width: 700px) {
+  font-size: 30px;
+  padding-left: 15%;
+  width: 100%;  
+}
 `;
 
 export const HeaderStyle = styles.header`

@@ -6,10 +6,14 @@ import styles from 'styled-components';
 
 const PostList = styles.ul`
 @media (min-width: 374px) {
-  display: grid:
-  grid-template-columns: 33% 33% 33%; 
   padding: 10px; 
   }
+@media (min-width: 700px) {
+  display: grid;
+  grid-template-columns: 33% 33% 33%; 
+  grid-column-gap: 30px;
+  list-style: none;
+}
 `;
 
 const PostItem = styles(Link)`
@@ -17,6 +21,12 @@ const PostItem = styles(Link)`
     font-family: 'Roboto', san-serif;
     color: rgb(93, 95, 96);
   }
+  @media (min-width: 700px) {
+    font-family: 'Roboto', san-serif;
+    color: rgb(93, 95, 96);
+    font-size: 30px;
+  }
+
 `;
 
 
@@ -24,6 +34,11 @@ const PostDes = styles.p`
   @media (min-width: 374px) {
     font-family: 'Roboto', san-serif;
     color: rgb(93, 95, 96);
+  }
+  @media (min-width: 700px) {
+    font-family: 'Roboto', san-serif;
+    color: rgb(93, 95, 96);
+    font-size: 25px;
   }
 `;
 
