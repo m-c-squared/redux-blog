@@ -1,4 +1,4 @@
-import Home from '../container/Home';
+import Home from '../container/home/Home';
 // import FilteredPosts from './container/';
 // import RegisterUser from './container/';
 import AllUsers from '../container/AllUsers';
