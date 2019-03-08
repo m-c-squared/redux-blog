@@ -1,4 +1,10 @@
-const { getUser, getUsers, getPosts, getComments } = require('./blogApiServices');
+const { getUser, 
+  getUsers, 
+  getPosts, 
+  getComments, 
+  getUserPosts, 
+  getPost,
+  getComment, getPostComments } = require('./blogApiServices');
 
 jest.mock('./blogApiServices');
 
@@ -61,6 +67,65 @@ describe('blogApi services', () => {
         expect(comments).toEqual([
           {
             postId: 1,
+            body: 'laudantium enim quasi est quidem magnam voluptate ipsam eos\ntempora quo necessitatibus\ndolor quam autem quasi\nreiciendis et nam sapiente accusantium'
+          },
+          {
+            postId: 1,
+            body: 'est natus enim nihil est dolore omnis voluptatem numquam\net omnis occaecati quod ullam at\nvoluptatem error expedita pariatur\nnihil sint nostrum voluptatem reiciendis et'
+          }
+        ]);
+      });
+  });
+
+  it('gets posts by user id', () => {
+    return getUserPosts()
+      .then(posts => {
+        expect(posts).toEqual([
+          {
+            userId: 2,
+            id: 11,
+            title: 'et ea vero quia laudantium autem',
+            body: 'delectus reiciendis molestiae occaecati non minima eveniet qui voluptatibus\naccusamus in eum beatae sit\nvel qui neque voluptates ut commodi qui incidunt\nut animi commodi'
+          },
+          {
+            userId: 2,
+            id: 12,
+            title: 'in quibusdam tempore odit est dolorem',
+            body: 'itaque id aut magnam\npraesentium quia et ea odit et ea voluptas et\nsapiente quia nihil amet occaecati quia id voluptatem\nincidunt ea est distinctio odio'
+          }
+        ]);
+      });
+  });
+
+  it('gets posts by postId', () => {
+    return getPost()
+      .then(posts => {
+        expect(posts).toEqual([
+          {
+            userId: 1,
+            title: 'sunt aut facere repellat provident occaecati excepturi optio reprehenderit',
+            body: 'quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto'
+          }
+        ]);
+      });
+  });
+
+  it('gets comments by comment id', () => {
+    return getComment()
+      .then(comments => {
+        expect(comments).toEqual([{
+          postId: 1,
+          body: 'laudantium enim quasi est quidem magnam voluptate ipsam eos\ntempora quo necessitatibus\ndolor quam autem quasi\nreiciendis et nam sapiente accusantium'   
+        }]);
+      });
+  });
+
+  it('gets comments by postId', () => {
+    return getPostComments()
+      .then(comments => {
+        expect(comments).toEqual([
+          {
+            postId: 1,    
             body: 'laudantium enim quasi est quidem magnam voluptate ipsam eos\ntempora quo necessitatibus\ndolor quam autem quasi\nreiciendis et nam sapiente accusantium'
           },
           {

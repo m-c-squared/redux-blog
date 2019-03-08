@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { ROUTES } from '../../routes/routes';
 import styles from 'styled-components';
 
+
 const PostList = styles.ul`
 @media (min-width: 374px) {
   padding: 10px; 
@@ -29,6 +30,21 @@ const PostItem = styles(Link)`
 
 `;
 
+
+const PostList = styles.ul`
+@media (min-width: 374px) {
+  display: grid:
+  grid-template-columns: 33% 33% 33%; 
+  padding: 10px; 
+  }
+`;
+
+const PostItem = styles(Link)`
+  @media (min-width: 374px) {
+    font-family: 'Roboto', san-serif;
+    color: rgb(93, 95, 96);
+  }
+`;
 
 const PostDes = styles.p`
   @media (min-width: 374px) {

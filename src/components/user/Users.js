@@ -21,7 +21,6 @@ export const right = {
   }
 };
 
-
 const UserLink = styles.ul`
 @media (min-width: 374px) {
   display: grid;
@@ -84,6 +83,18 @@ const ImageList = styles.ul`
   display: grid;
   grid-template-columns: 50% 50%;
   padding: 0;
+`;  
+
+const UserList = styles(Link)`
+  font-family: 'Roboto', san serif;
+  color: rgb(93, 95, 96);
+  overflow-wrap: word-break;
+`;
+
+const UserTitle = styles.h1`
+  margin-top: 1.5em;
+  color: rgb(93, 95, 96);
+  font-family: 'Roboto', san serif;
 `;
 
 const Users = ({ users }) => {
@@ -104,7 +115,6 @@ const Users = ({ users }) => {
         {userList}
       </UserLink>
     </StyleRoot>
-  );
 };
 
 Users.propTypes =  {

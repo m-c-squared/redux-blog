@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`users matches a snapshot 1`] = `
+Array [
+  <h1
+    className="sc-VigVT fsMciH"
+  >
+     OUR CLIENTS 
+  </h1>,
+  <ul
+    className="sc-gZMcBi dUQaga"
+  >
+    <a
+      className="sc-gqjmRU fOBMEb"
+      href="/users/23"
+      onClick={[Function]}
+    >
+       
+      Clementina DuBuque
+       
+    </a>
+    <a
+      className="sc-gqjmRU fOBMEb"
+      href="/users/5"
+      onClick={[Function]}
+    >
+       
+      Kurtis Weissnat
+       
+    </a>
+  </ul>,
+]
+`;

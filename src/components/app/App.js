@@ -6,7 +6,6 @@ import 'normalize.css';
 
 import styled from 'styled-components';
 
-
 const HomePage = styled.section`
 @media (min-width: 374px) {
     background-color:rgb(242, 243, 244);
@@ -17,8 +16,6 @@ const HomePage = styled.section`
     background-color:rgb(242, 243, 244);
     height: 100vh;
   }
-`;
-
 const HomeTitle = styled.h1`
   @media (min-width: 374px) {
     height: 20%;
