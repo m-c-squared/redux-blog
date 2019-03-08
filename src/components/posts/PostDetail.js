@@ -23,6 +23,7 @@ const PostDetail = ({ postDetail, comments }) => {
       <p>{title}</p>
       <p>{body}</p>
       <p>{postComments}</p>
+      <p></p>
     </div>
     </>
   );
