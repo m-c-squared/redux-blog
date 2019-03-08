@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header matches a snapshot 1`] = `
+<header>
+  <nav>
+    <a
+      href="/"
+      onClick={[Function]}
+    >
+      Home
+    </a>
+    <a
+      href="/users"
+      onClick={[Function]}
+    >
+      All Users
+    </a>
+    <a
+      href="/users/undefined"
+      onClick={[Function]}
+    >
+      User Detail
+    </a>
+    <a
+      href="/comments"
+      onClick={[Function]}
+    >
+      All Comments
+    </a>
+    <a
+      href="/posts"
+      onClick={[Function]}
+    >
+      All Posts
+    </a>
+  </nav>
+</header>
+`;

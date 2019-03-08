@@ -17,12 +17,13 @@ const PostDetail = ({ postDetail, comments }) => {
   return (
     <>
     <div>
-      <h1> Post </h1>
-      <p> {id} </p>
-      <p> {userId} </p>
-      <p> {title} </p>
-      <p> {body} </p>
-      <p> {postComments} </p>
+      <h1>Post</h1>
+      <p>{id}</p>
+      <p>{userId}</p>
+      <p>{title}</p>
+      <p>{body}</p>
+      <p>{postComments}</p>
+      <p></p>
     </div>
     </>
   );
