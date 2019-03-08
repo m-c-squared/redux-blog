@@ -22,6 +22,7 @@ export const NavStyle = styles(Link)`
   padding: 10px 40px 10px 35px;
 }
 
+
 @media (min-width: 700px) {
   font-size: 30px;
   padding-left: 15%;

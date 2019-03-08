@@ -21,7 +21,6 @@ export const right = {
   }
 };
 
-
 const UserLink = styles.ul`
 @media (min-width: 374px) {
   display: grid;
@@ -37,7 +36,7 @@ const UserLink = styles.ul`
 }
 `;  
 
-const UserList = styles(Link)`
+const UserLists = styles(Link)`
 @media (min-width: 374px) {
   font-family: 'Roboto', san serif;
   color: rgb(93, 95, 96);
@@ -50,7 +49,7 @@ const UserList = styles(Link)`
 }
 `;
 
-const UserTitle = styles.h1`
+const UserTitles = styles.h1`
 @media (min-width: 374px) {
   margin-top: 1.5em;
   color: rgb(93, 95, 96);
@@ -84,14 +83,14 @@ const ImageList = styles.ul`
   display: grid;
   grid-template-columns: 50% 50%;
   padding: 0;
-`;
+`;  
 
 const Users = ({ users }) => {
   const userList = users.map(({ id, name }) => 
-    <UserList key={id} to={ROUTES.USER_CONTAINER.linkTo(id)}> {name} </UserList>);
+    <UserLists key={id} to={ROUTES.USER_CONTAINER.linkTo(id)}> {name} </UserLists>);
   return (
     <StyleRoot>
-      <UserTitle> OUR CLIENTS </UserTitle>
+      <UserTitles> OUR CLIENTS </UserTitles>
       <ImageList>
         <div style={style.fadeInLeft}>
           <UserImage src="/assets/rawpixel-411170-unsplash.jpg"></UserImage>
