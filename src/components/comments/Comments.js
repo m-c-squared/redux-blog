@@ -1,26 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import { Link } from 'react-router-dom';
-// import { ROUTES }   from '../../routes/routes';
 
 const Comments = ({ comments }) => {
-  const commentList = comments.map(({ id }) => {
-    return (<li key={id}>{id}</li>);
-  });
 
-  // const commentList = comments.map(({ commentId }) => 
-  //   <Link key={ commentId} to={`/comments/${commentId}`}></Link>);
+  const commentList = comments.map((({ body }) => {
+    return <li key={body}> {body} </li>;
+  }));
+
   return (
-      <>
-      <ul> 
-        {commentList}
-      </ul>
-      </>
+    <>
+    <ul>
+      {commentList}
+    </ul>
+     </>
   );
 };
 
-Comments.propTypes = {
-  comments: PropTypes.string.isRequired
+Comments.propTypes =  {
+  comments: PropTypes.array.isRequired
 };
 
-export default Comments;
+export default Comments; 
