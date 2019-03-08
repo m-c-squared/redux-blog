@@ -16,3 +16,9 @@ export const fetchUserPosts = userId => ({
   type: FETCH_POSTS,
   payload: getUserPosts(userId)
 });
+
+export const UPDATE_POST_SEARCH_TERM = 'UPDATE_POST_SEARCH_TERM';
+export const updatePostSearchTerm = searchTerm => ({
+  type: UPDATE_POST_SEARCH_TERM,
+  payload: searchTerm
+});

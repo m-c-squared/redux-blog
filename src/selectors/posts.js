@@ -12,3 +12,12 @@ export const getLongestPosts = state => {
     .sort((a, b) => b.length - a.length)
     .slice(0, 5);
 };
+
+export const getSearchTerm = state => state.posts.searchTerm;
+
+export const getFilteredPosts = state => {
+  return getAllPosts(state)
+    .filter(posts => posts.body.includes(getSearchTerm(state))
+      || posts.title.includes(getSearchTerm(state))
+    );
+};
