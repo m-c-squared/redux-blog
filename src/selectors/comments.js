@@ -5,3 +5,5 @@ export const getAllComments = state => {
 export const getCommentById = state => {
   return state.comments.commentDetail;
 };
+
+export const isLoading = state => state.comments.loading;
