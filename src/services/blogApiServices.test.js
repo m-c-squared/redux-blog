@@ -4,7 +4,7 @@ const { getUser,
   getComments, 
   getUserPosts, 
   getPost,
-  getComment } = require('./blogApiServices');
+  getComment, getPostComments } = require('./blogApiServices');
 
 jest.mock('./blogApiServices');
 
@@ -120,4 +120,19 @@ describe('blogApi services', () => {
       });
   });
 
+  it('gets comments by postId', () => {
+    return getPostComments()
+      .then(comments => {
+        expect(comments).toEqual([
+          {
+            postId: 1,    
+            body: 'laudantium enim quasi est quidem magnam voluptate ipsam eos\ntempora quo necessitatibus\ndolor quam autem quasi\nreiciendis et nam sapiente accusantium'
+          },
+          {
+            postId: 1,
+            body: 'est natus enim nihil est dolore omnis voluptatem numquam\net omnis occaecati quod ullam at\nvoluptatem error expedita pariatur\nnihil sint nostrum voluptatem reiciendis et'
+          }
+        ]);
+      });
+  });
 });
