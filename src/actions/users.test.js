@@ -1,6 +1,12 @@
 import { createStore, applyMiddleware } from 'redux';
 import { middleware } from '../middleware';
-import { fetchUser, FETCH_USER, fetchUsers, FETCH_USERS } from './users';
+import {
+  fetchUser,
+  FETCH_USER,
+  fetchUsers,
+  FETCH_USERS,
+  FETCH_USERS_LOADING
+} from './users';
 
 jest.mock('../services/blogApiServices');
 
@@ -43,7 +49,7 @@ describe('Users actions', () => {
     store.dispatch(fetchUsers());
     setTimeout(() => {
       expect(reducer).toHaveBeenCalledWith(undefined, {
-        type: 'LOAD_START'
+        type: FETCH_USERS_LOADING
       });
       expect(reducer).toHaveBeenCalledWith(undefined, {
         type: FETCH_USERS,
