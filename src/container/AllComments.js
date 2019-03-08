@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Comments from '../components/comments/Comments';
 import { fetchComments } from '../actions/comments';
 import { getAllComments, isLoading } from '../selectors/comments';
-import preloader from '../assets/preloader.gif';
+import preloader from '../../assets/preloader.gif';
 
 class AllComments extends PureComponent {
   static propTypes = {
