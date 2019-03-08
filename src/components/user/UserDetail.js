@@ -25,17 +25,17 @@ const UserDetail = ({ userDetail, posts }) => {
     return <Redirect to={ROUTES.HOME.linkTo()} />;
   }
 
-  const { id, name, email, username } = userDetail;
+  const { name, email, username } = userDetail;
 
   return (
     <>
-    <UserTitle>
-      <h1> USER </h1>
-      <p> name: {name} </p>
-      <p> email: {email} </p>
-      <p> username: {username} </p>
-      <p>List of Posts: {listOfPosts}</p>
-    </UserTitle>
+      <UserTitle>
+        <h1>USER</h1>
+        <p>name: {name}</p>
+        <p>email: {email}</p>
+        <p>username: {username}</p>
+        <p>List of Posts: {listOfPosts}</p>
+      </UserTitle>
     </>
   );
 };
