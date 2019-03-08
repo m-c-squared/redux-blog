@@ -1,4 +1,5 @@
 import { FETCH_COMMENT, FETCH_COMMENTS } from '../actions/comments';
+import { RESET } from '../actions/common';
 
 const initialState = {
   comments: [],
@@ -20,6 +21,8 @@ export default function reducer(state = initialState, { type, payload }) {
           body: payload.body
         }
       };
+    case RESET:
+      return { ...initialState };
     default:
       return state;
   }
