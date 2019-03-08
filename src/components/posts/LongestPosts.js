@@ -1,6 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from 'styled-components';
+import { fadeInLeft, fadeInRight } from 'react-animations';
+import Radium, { StyleRoot } from 'radium';
+
+export const style = {
+  fadeInLeft: {
+    animation: 'x 1s',
+    animationName: Radium.keyframes(fadeInLeft, 'fadeInLeft')
+  }
+};
+
+export const right = {
+  fadeInRight: {
+    animation: 'x 1s',
+    animationName: Radium.keyframes(fadeInRight, 'fadeInRight')
+  }
+};
+
 
 export const HomePostContainer = styles.ul`
  @media (min-width: 374px) {
@@ -97,29 +114,31 @@ const LongestPosts = ({ posts }) => {
 
   return (
     <>
-     <Image>
-       <ul>
-         <div>
-           <img src="/assets/annie-spratt-413815-unsplash.jpg"></img>
-         </div>
-         <div>
-           <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed metus metus, iaculis ut suscipit sit amet, ultrices id orci. Cras nibh ipsum, accumsan in facilisis eu, molestie in ipsum. Integer eget mi sit amet neque lacinia vulputate. Sed in neque vitae ipsum imperdiet suscipit in a orci. Proin varius tellus auctor augue viverra aliquam. Vestibulum vitae semper ipsum, eu tristique nisl. Proin vel lectus eget tellus faucibus tempor. Nam non odio nisl. Maecenas auctor lacinia ligula id suscipit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tincidunt leo et sapien pellentesque mollis. Cras cursus nunc a odio faucibus, eu ultrices arcu ultricies.
+    <StyleRoot>
+      <Image>
+        <ul>
+          <div style={style.fadeInLeft}>
+            <img src="/assets/annie-spratt-413815-unsplash.jpg"></img>
+          </div>
+          <div style={right.fadeInRight}>
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed metus metus, iaculis ut suscipit sit amet, ultrices id orci. Cras nibh ipsum, accumsan in facilisis eu, molestie in ipsum. Integer eget mi sit amet neque lacinia vulputate. Sed in neque vitae ipsum imperdiet suscipit in a orci. Proin varius tellus auctor augue viverra aliquam. Vestibulum vitae semper ipsum, eu tristique nisl. Proin vel lectus eget tellus faucibus tempor. Nam non odio nisl. Maecenas auctor lacinia ligula id suscipit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tincidunt leo et sapien pellentesque mollis. Cras cursus nunc a odio faucibus, eu ultrices arcu ultricies.
              Nam sodales in urna ac rhoncus. In eu risus nec augue vehicula finibus quis sit amet nulla. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec euismod leo porttitor, consequat purus quis, varius eros. Cras ut nibh odio. Ut ante purus, ultrices eget leo vitae, luctus convallis massa. Nunc pharetra metus et vestibulum porta. Duis urna ante, congue ut porttitor in, aliquet commodo dolor. Vivamus vestibulum bibendum auctor. Suspendisse tortor ex, consectetur vestibulum facilisis sed, faucibus id orci. Aliquam non malesuada eros. Sed sed accumsan augue. In consectetur dui vel leo tincidunt, nec consectetur risus pellentesque. Nulla sed leo feugiat neque blandit pellentesque.</p>
-         </div>
-       </ul>
-       <ul>
-         <div>
-           <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed metus metus, iaculis ut suscipit sit amet, ultrices id orci. Cras nibh ipsum, accumsan in facilisis eu, molestie in ipsum. Integer eget mi sit amet neque lacinia vulputate. Sed in neque vitae ipsum imperdiet suscipit in a orci. Proin varius tellus auctor augue viverra aliquam. Vestibulum vitae semper ipsum, eu tristique nisl. Proin vel lectus eget tellus faucibus tempor. Nam non odio nisl. Maecenas auctor lacinia ligula id suscipit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tincidunt leo et sapien pellentesque mollis. Cras cursus nunc a odio faucibus, eu ultrices arcu ultricies.
+          </div>
+        </ul>
+        <ul>
+          <div style={right.fadeInRight}>
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed metus metus, iaculis ut suscipit sit amet, ultrices id orci. Cras nibh ipsum, accumsan in facilisis eu, molestie in ipsum. Integer eget mi sit amet neque lacinia vulputate. Sed in neque vitae ipsum imperdiet suscipit in a orci. Proin varius tellus auctor augue viverra aliquam. Vestibulum vitae semper ipsum, eu tristique nisl. Proin vel lectus eget tellus faucibus tempor. Nam non odio nisl. Maecenas auctor lacinia ligula id suscipit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tincidunt leo et sapien pellentesque mollis. Cras cursus nunc a odio faucibus, eu ultrices arcu ultricies.
              Nam sodales in urna ac rhoncus. In eu risus nec augue vehicula finibus quis sit amet nulla. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec euismod leo porttitor, consequat purus quis, varius eros. Cras ut nibh odio. Ut ante purus, ultrices eget leo vitae, luctus convallis massa. Nunc pharetra metus et vestibulum porta. Duis urna ante, congue ut porttitor in, aliquet commodo dolor. Vivamus vestibulum bibendum auctor. Suspendisse tortor ex, consectetur vestibulum facilisis sed, faucibus id orci. Aliquam non malesuada eros. Sed sed accumsan augue. In consectetur dui vel leo tincidunt, nec consectetur risus pellentesque. Nulla sed leo feugiat neque blandit pellentesque.</p>
-         </div>
-         <div>
-           <img src="/assets/j-zamora-267753-unsplash.jpg"></img>
-         </div>
-       </ul>
-     </Image> 
+          </div>
+          <div style={style.fadeInLeft}>
+            <img src="/assets/j-zamora-267753-unsplash.jpg"></img>
+          </div>
+        </ul>
+      </Image> 
       <HomePostContainer>
         {longestPostList}
       </HomePostContainer>
+    </StyleRoot>
     </>
   );
 };

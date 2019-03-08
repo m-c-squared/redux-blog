@@ -1,9 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import User from './User';
 import { Link } from 'react-router-dom';
 import { ROUTES } from '../../routes/routes';
 import styles from 'styled-components';
+import { fadeInLeft, fadeInRight } from 'react-animations';
+import Radium, { StyleRoot } from 'radium';
+
+
+export const style = {
+  fadeInLeft: {
+    animation: 'x 1s',
+    animationName: Radium.keyframes(fadeInLeft, 'fadeInLeft')
+  }
+};
+
+export const right = {
+  fadeInRight: {
+    animation: 'x 1s',
+    animationName: Radium.keyframes(fadeInRight, 'fadeInRight')
+  }
+};
+
 
 const UserLink = styles.ul`
 @media (min-width: 374px) {
@@ -73,16 +90,20 @@ const Users = ({ users }) => {
   const userList = users.map(({ id, name }) => 
     <UserList key={id} to={ROUTES.USER_CONTAINER.linkTo(id)}> {name} </UserList>);
   return (
-    <>
-    <UserTitle> OUR CLIENTS </UserTitle>
-    <ImageList>
-      <UserImage src="/assets/rawpixel-411170-unsplash.jpg"></UserImage>
-      <UserImage src="/assets/rawpixel-983649-unsplash.jpg"></UserImage>
-    </ImageList>
-    <UserLink>
-      {userList}
-    </UserLink>
-     </>
+    <StyleRoot>
+      <UserTitle> OUR CLIENTS </UserTitle>
+      <ImageList>
+        <div style={style.fadeInLeft}>
+          <UserImage src="/assets/rawpixel-411170-unsplash.jpg"></UserImage>
+        </div>
+        <div style={right.fadeInRight}>
+          <UserImage style={right.fadeInRight} src="/assets/rawpixel-983649-unsplash.jpg"></UserImage>
+        </div>
+      </ImageList>
+      <UserLink>
+        {userList}
+      </UserLink>
+    </StyleRoot>
   );
 };
 
