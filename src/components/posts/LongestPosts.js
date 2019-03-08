@@ -21,11 +21,13 @@ export const HomePosts = styles.li`
       letter-spacing: .02em;
       text-decoration: underline;
       margin-top: 2em;
+      color: rgb(93, 95, 96);
     }
     p {
       text-align: left;
       margin: 10px;
       font-size: 15px;
+      color: rgb(93, 95, 96);
     }
   }
 `;

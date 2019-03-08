@@ -7,12 +7,12 @@ import 'normalize.css';
 import styled from 'styled-components';
 
 const HomePage = styled.section`
-@media (max-width: 375px) {
+@media (min-width: 374px) {
   background-color:rgb(242, 243, 244);
 `;
 
 const HomeTitle = styled.h1`
-  @media (max-width: 375px) {
+  @media (min-width: 374px) {
     height: 100%;
     font-size: 20px;
     padding: 15%;
