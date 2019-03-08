@@ -3,8 +3,10 @@ import reducer from './comments';
 describe('Comments reducer', () => {
   it('handles a fetch comment action', () => {
     const state = {
-      postId: null,
-      body: ''
+      commentDetail: {
+        postId: null,
+        body: ''
+      }
     };
     const fetchedState = reducer(state, {
       type: 'FETCH_COMMENT',
@@ -14,8 +16,10 @@ describe('Comments reducer', () => {
       }
     });
     expect(fetchedState).toEqual({
-      postId: 2,
-      body: 'blahblahblah'
+      commentDetail: {
+        postId: 2,
+        body:'blahblahblah'
+      }
     });
   });
 
@@ -30,14 +34,14 @@ describe('Comments reducer', () => {
       type: 'FETCH_COMMENTS',
       payload: [{
         postId: 2,
-        body: 'blahblahblah'
+        body:'blahblahblah'
       }]
     });
     expect(fetchedState).toEqual({
       comments: [{
         postId: 2,
-        body: 'blahblahblah'
-      }] 
+        body:'blahblahblah'
+      }]
     });
   });
 });

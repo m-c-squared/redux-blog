@@ -4,6 +4,7 @@ import Home from '../container/Home';
 import AllUsers from '../container/AllUsers';
 import AllPosts from '../container/AllPosts';
 import UserContainer from '../container/UserContainer';
+import AllComments from '../container/AllComments';
 import PostContainer from '../container/PostContainer';
 
 export const ROUTES = {
@@ -37,10 +38,14 @@ export const ROUTES = {
     Component: UserContainer,
     linkTo: (id) => `/users/${id}`
   },
+  ALL_COMMENTS:{
+    path:'/comments',
+    Component: AllComments,
+    linkTo:() => '/comments'
+  },
   POST_CONTAINER:{
     path:'/posts/:id',
     Component: PostContainer,
     linkTo: (id) => `/posts/${id}`
   }
-
 };

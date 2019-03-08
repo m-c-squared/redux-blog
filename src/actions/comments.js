@@ -8,6 +8,6 @@ export const fetchComments = () => ({
 
 export const FETCH_COMMENT = 'FETCH_COMMENT';
 export const fetchComment = commentId => ({
-  type: FETCH_COMMENTS,
+  type: FETCH_COMMENT,
   payload: getComment(commentId)
 });
