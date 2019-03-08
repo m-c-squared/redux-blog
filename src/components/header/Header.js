@@ -17,6 +17,10 @@ export const NavStyle = styles(Link)`
   color: white;
   font-family: 'Carrois Gothic SC', sans-serif;
 }
+
+@media (min-width: 413px) {
+  padding: 10px 40px 10px 35px;
+}
 `;
 
 export const HeaderStyle = styles.header`
