@@ -2,21 +2,27 @@
 
 exports[`Posts matches a snapshot 1`] = `
 <ul>
-  <a
-    href="/posts/1"
-    onClick={[Function]}
-  >
-     
-    asperiores ea ipsam voluptatibus modi minima quia sinta
-     
-  </a>
-  <a
-    href="/posts/21"
-    onClick={[Function]}
-  >
-     
-    ullam ut quidem id aut vel consequunt
-     
-  </a>
+  <li>
+    <a
+      href="/posts/1"
+      onClick={[Function]}
+    >
+      <p>
+        asperiores ea ipsam voluptatibus modi minima quia sinta
+      </p>
+    </a>
+    <p />
+  </li>
+  <li>
+    <a
+      href="/posts/21"
+      onClick={[Function]}
+    >
+      <p>
+        ullam ut quidem id aut vel consequunt
+      </p>
+    </a>
+    <p />
+  </li>
 </ul>
 `;
