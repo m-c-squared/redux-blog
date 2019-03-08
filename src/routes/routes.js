@@ -2,9 +2,10 @@ import Home from '../container/Home';
 // import FilteredPosts from './container/';
 // import RegisterUser from './container/';
 import AllUsers from '../container/AllUsers';
+import AllPosts from '../container/AllPosts';
 import UserContainer from '../container/UserContainer';
 import AllComments from '../container/AllComments';
-// import PostDetail from './container/';
+import PostContainer from '../container/PostContainer';
 
 export const ROUTES = {
   HOME:{
@@ -23,25 +24,28 @@ export const ROUTES = {
   //   linkTo:() => '/register'
   // }, 
   ALL_USERS:{
-    path:'/allUsers',
+    path:'/users',
     Component: AllUsers,
-    linkTo:() => '/users/allUsers'
-  }, 
-  USER_CONTAINER:{
-    path:'/user/:id',
-    Component: UserContainer,
-    linkTo: (id) => `/user/${id}`
+    linkTo: () => '/users'
   },
-  // POST_DETAIL:{
-  //   path:'/',
-  //   Component: PostDetail,
-  //   linkTo:() => '/post/postDetail'
-  // }
-
+  ALL_POSTS:{
+    path:'/posts',
+    Component: AllPosts,
+    linkTo: () => '/posts'
+  },
+  USER_CONTAINER:{
+    path:'/users/:id',
+    Component: UserContainer,
+    linkTo: (id) => `/users/${id}`
+  },
   ALL_COMMENTS:{
     path:'/comments',
     Component: AllComments,
     linkTo:() => '/comments'
   },
-
+  POST_CONTAINER:{
+    path:'/posts/:id',
+    Component: PostContainer,
+    linkTo: (id) => `/posts/${id}`
+  }
 };

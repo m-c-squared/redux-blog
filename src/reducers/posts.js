@@ -2,7 +2,7 @@ import { FETCH_POST, FETCH_POSTS } from '../actions/posts';
 
 const initialState = {
   posts: [],
-  postDetail: { userId: null, title: '', body: '' }
+  postDetail: { id: null, userId: null, title: '', body: '' }
 };
 
 export default function reducer(state = initialState, { type, payload }) {
@@ -15,9 +15,12 @@ export default function reducer(state = initialState, { type, payload }) {
     case FETCH_POST:
       return {
         ...state,
-        userId: payload.userId,
-        title: payload.title,
-        body: payload.body
+        postDetail: {
+          id: payload.id,
+          userId: payload.userId,
+          title: payload.title,
+          body: payload.body
+        }
       };
     default:
       return state;

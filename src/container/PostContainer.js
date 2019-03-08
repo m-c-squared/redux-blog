@@ -1,13 +1,13 @@
 import { connect } from 'react-redux';
 import React, { PureComponent } from 'react';
-import UserDetail from '../components/user/UserDetail';
-import { getUserById } from '../selectors/user';
-import { fetchUser } from '../actions/users';
+import PostDetail from '../components/posts/PostDetail';
+import { getPostById } from '../selectors/posts';
+import { fetchPost } from '../actions/posts';
 import PropTypes from 'prop-types';
 
-class UserContainer extends PureComponent {
+class PostContainer extends PureComponent {
   static propTypes = {
-    userDetail: PropTypes.object.isRequired,
+    postDetail: PropTypes.object.isRequired,
     fetch: PropTypes.func.isRequired,
     match: PropTypes.object.isRequired
   };
@@ -24,23 +24,23 @@ class UserContainer extends PureComponent {
 
   render() {
     return (
-      <UserDetail {...this.props} />
+      <PostDetail {...this.props} />
     );
   }
 }
 
 
 const mapStateToProps = (state) => ({
-  userDetail: getUserById(state)
+  postDetail: getPostById(state)
 });
 
 const mapDispatchToProps = (dispatch, props) => ({
   fetch() {
-    dispatch(fetchUser(props.match.params.id));
+    dispatch(fetchPost(props.match.params.id));
   }
 });
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(UserContainer);
+)(PostContainer);

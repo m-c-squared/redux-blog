@@ -4,10 +4,12 @@ import { FETCH_USER, FETCH_USERS } from '../actions/users';
 describe('Users reducers', () => {
   it('handles a fetch user action', () => {
     const state = {
-      id: null,
-      name: '',
-      username: '',
-      email: ''
+      userDetail: {
+        id: null,
+        name: '',
+        username: '',
+        email: ''
+      }
     };
     const fetchedState = reducer(state, {
       type: FETCH_USER,
@@ -19,10 +21,12 @@ describe('Users reducers', () => {
       }
     });
     expect(fetchedState).toEqual({
-      id: 2,
-      name: 'mc2',
-      username: 'usermc2',
-      email: 'mc2email@com'
+      userDetail: {
+        id: 2,
+        name: 'mc2',
+        username: 'usermc2',
+        email: 'mc2email@com'
+      }
     });
   });
 

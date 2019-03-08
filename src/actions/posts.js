@@ -7,7 +7,7 @@ export const fetchPosts = () => ({
 });
 
 export const FETCH_POST = 'FETCH_POST';
-export const fetchPost = postId => ({
-  type: FETCH_POSTS,
-  payload: getPost(postId)
+export const fetchPost = id => ({
+  type: FETCH_POST,
+  payload: getPost(id)
 });
