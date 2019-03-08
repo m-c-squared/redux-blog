@@ -20,7 +20,8 @@ describe('Comments reducer', () => {
       commentDetail: {
         postId: 2,
         body:'blahblahblah'
-      }
+      },
+      loading: false
     });
   });
 
@@ -42,7 +43,8 @@ describe('Comments reducer', () => {
       comments: [{
         postId: 2,
         body:'blahblahblah'
-      }]
+      }],
+      loading: false
     });
   });
 });
