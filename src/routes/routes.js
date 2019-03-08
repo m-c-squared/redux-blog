@@ -3,6 +3,7 @@ import Home from '../container/Home';
 // import RegisterUser from './container/';
 import AllUsers from '../container/AllUsers';
 import UserContainer from '../container/UserContainer';
+import AllComments from '../container/AllComments';
 // import PostDetail from './container/';
 
 export const ROUTES = {
@@ -37,5 +38,10 @@ export const ROUTES = {
   //   linkTo:() => '/post/postDetail'
   // }
 
+  ALL_COMMENTS:{
+    path:'/comments',
+    Component: AllComments,
+    linkTo:() => '/comments'
+  },
 
 };
