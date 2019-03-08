@@ -4,12 +4,14 @@ import PostDetail from '../components/posts/PostDetail';
 import { getPostById } from '../selectors/posts';
 import { fetchPost } from '../actions/posts';
 import PropTypes from 'prop-types';
+import { getAllComments } from '../selectors/comments';
 
 class PostContainer extends PureComponent {
   static propTypes = {
     postDetail: PropTypes.object.isRequired,
     fetch: PropTypes.func.isRequired,
-    match: PropTypes.object.isRequired
+    match: PropTypes.object.isRequired,
+    comments: PropTypes.array.isRequired
   };
 
   componentDidMount() {
@@ -31,7 +33,8 @@ class PostContainer extends PureComponent {
 
 
 const mapStateToProps = (state) => ({
-  postDetail: getPostById(state)
+  postDetail: getPostById(state),
+  comments: getAllComments(state)
 });
 
 const mapDispatchToProps = (dispatch, props) => ({

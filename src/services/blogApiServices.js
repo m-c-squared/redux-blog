@@ -32,3 +32,8 @@ export const getComment = commentId => {
   return fetch(`https://jsonplaceholder.typicode.com/comments/${commentId}`)
     .then(res => res.json());
 };
+
+export const getPostComments = postId => {
+  return fetch(`https://jsonplaceholder.typicode.com/comments?postId=${postId}`)
+    .then(res => res.json());
+};
