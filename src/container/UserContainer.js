@@ -4,6 +4,7 @@ import UserDetail from '../components/user/UserDetail';
 import { getUserById } from '../selectors/user';
 import { fetchUser } from '../actions/users';
 import PropTypes from 'prop-types';
+import { fetchUserPosts } from '../actions/posts';
 
 class UserContainer extends PureComponent {
   static propTypes = {
@@ -37,6 +38,7 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch, props) => ({
   fetch() {
     dispatch(fetchUser(props.match.params.id));
+    dispatch(fetchUserPosts(props.match.params.id));
   }
 });
 
