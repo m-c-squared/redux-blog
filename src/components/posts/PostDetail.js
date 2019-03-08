@@ -3,8 +3,12 @@ import PropTypes from 'prop-types';
 import { Redirect } from 'react-router-dom';
 import { ROUTES } from '../../routes/routes';
 
-const PostDetail = ({ postDetail }) => {
-  console.log('post', postDetail);
+const PostDetail = ({ postDetail, comments }) => {
+
+  const postComments = comments.map((comment, i) => {
+    return (<li key={i}> {comment.body} </li>);
+  });
+ 
   if(!postDetail) {
     return <Redirect to={ROUTES.HOME.linkTo()} />;
   }
@@ -18,13 +22,15 @@ const PostDetail = ({ postDetail }) => {
       <p> {userId} </p>
       <p> {title} </p>
       <p> {body} </p>
+      <p> {postComments} </p>
     </div>
     </>
   );
 };
 
 PostDetail.propTypes = {
-  postDetail: PropTypes.object.isRequired
+  postDetail: PropTypes.object.isRequired,
+  comments: PropTypes.array
 };
 
 export default PostDetail;
