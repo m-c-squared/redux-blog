@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { ROUTES } from '../../routes/routes';
+import styles from 'styled-components';
 
 const Posts = ({ posts }) => {
   const postList = posts.map((post, i) => {
