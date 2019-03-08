@@ -8,7 +8,6 @@ import styled from 'styled-components';
 
 const HomePage = styled.section`
 @media (max-width: 375px) {
-  padding: 0;
   background-color:rgb(242, 243, 244);
 `;
 
