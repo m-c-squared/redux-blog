@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Header from '../header/Header.js';
 import { ROUTES } from '../../routes/routes';
 import 'normalize.css';
+import image5 from '../../../assets/floriane-vita-88722-unsplash.jpg';
 
 import styled from 'styled-components';
 
@@ -26,7 +27,7 @@ const HomeTitle = styled.h1`
     text-align: center;
     font-family: 'Carrois Gothic SC', sans-serif;
     letter-spacing: .1em;
-    background-image: url('../../../assets/floriane-vita-88722-unsplash.jpg');
+    background-image: url(${image5});
     background-size: 100% 700px;
     background-repeat: no-repeat;
     margin: 0;
