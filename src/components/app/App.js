@@ -26,7 +26,7 @@ const HomeTitle = styled.h1`
     text-align: center;
     font-family: 'Carrois Gothic SC', sans-serif;
     letter-spacing: .1em;
-    background-image: url('/assets/floriane-vita-88722-unsplash.jpg');
+    background-image: url('../../../assets/floriane-vita-88722-unsplash.jpg');
     background-size: 100% 700px;
     background-repeat: no-repeat;
     margin: 0;

@@ -5,6 +5,8 @@ import { ROUTES } from '../../routes/routes';
 import styles from 'styled-components';
 import { fadeInLeft, fadeInRight } from 'react-animations';
 import Radium, { StyleRoot } from 'radium';
+import image3 from '../../../assets/rawpixel-411170-unsplash.jpg';
+import image4 from '../../../assets/rawpixel-983649-unsplash.jpg';
 
 
 export const style = {
@@ -93,10 +95,10 @@ const Users = ({ users }) => {
       <UserTitles> OUR CLIENTS </UserTitles>
       <ImageList>
         <div style={style.fadeInLeft}>
-          <UserImage src="/assets/rawpixel-411170-unsplash.jpg"></UserImage>
+          <UserImage src={image3}></UserImage>
         </div>
         <div style={right.fadeInRight}>
-          <UserImage style={right.fadeInRight} src="/assets/rawpixel-983649-unsplash.jpg"></UserImage>
+          <UserImage style={right.fadeInRight} src={image4}></UserImage>
         </div>
       </ImageList>
       <UserLink>
