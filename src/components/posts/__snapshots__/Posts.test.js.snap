@@ -11,6 +11,7 @@ exports[`Posts matches a snapshot 1`] = `
       onClick={[Function]}
     >
       <p>
+         
         asperiores ea ipsam voluptatibus modi minima quia sinta
       </p>
     </a>
@@ -25,6 +26,7 @@ exports[`Posts matches a snapshot 1`] = `
       onClick={[Function]}
     >
       <p>
+         
         ullam ut quidem id aut vel consequunt
       </p>
     </a>

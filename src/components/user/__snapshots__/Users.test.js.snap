@@ -23,7 +23,7 @@ exports[`users matches a snapshot 1`] = `
     >
       <img
         className="sc-fjdhpX lheVPl"
-        src="/assets/rawpixel-411170-unsplash.jpg"
+        src=""
       />
     </div>
     <div
@@ -37,7 +37,7 @@ exports[`users matches a snapshot 1`] = `
     >
       <img
         className="sc-fjdhpX lheVPl"
-        src="/assets/rawpixel-983649-unsplash.jpg"
+        src=""
         style={
           Object {
             "animation": "x 1s",
