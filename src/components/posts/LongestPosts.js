@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import styles from 'styled-components';
 import { fadeInLeft, fadeInRight } from 'react-animations';
 import Radium, { StyleRoot } from 'radium';
+import image from '../../../assets/annie-spratt-413815-unsplash.jpg';
 
 export const style = {
   fadeInLeft: {
@@ -117,7 +118,7 @@ const LongestPosts = ({ posts }) => {
       <Image>
         <ul>
           <div style={style.fadeInLeft}>
-            <img src="/assets/annie-spratt-413815-unsplash.jpg"></img>
+            <img src={image}></img>
           </div>
           <div style={right.fadeInRight}>
             <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed metus metus, iaculis ut suscipit sit amet, ultrices id orci. Cras nibh ipsum, accumsan in facilisis eu, molestie in ipsum. Integer eget mi sit amet neque lacinia vulputate. Sed in neque vitae ipsum imperdiet suscipit in a orci. Proin varius tellus auctor augue viverra aliquam. Vestibulum vitae semper ipsum, eu tristique nisl. Proin vel lectus eget tellus faucibus tempor. Nam non odio nisl. Maecenas auctor lacinia ligula id suscipit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tincidunt leo et sapien pellentesque mollis. Cras cursus nunc a odio faucibus, eu ultrices arcu ultricies.
