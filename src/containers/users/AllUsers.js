@@ -1,10 +1,10 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { getAllUsers, isLoading } from '../selectors/user';
-import Users from '../components/user/Users';
-import { fetchUsers } from '../actions/users';
-import preloader from '../../assets/preloader.gif';
+import { getAllUsers, isLoading } from '../../selectors/user';
+import Users from '../../components/user/Users';
+import { fetchUsers } from '../../actions/users';
+import preloader from '../../../assets/preloader.gif';
 
 class AllUsers extends PureComponent {
   static propTypes = {

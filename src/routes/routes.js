@@ -1,9 +1,8 @@
-import Home from '../container/home/Home';
-// import RegisterUser from './container/';
-import AllUsers from '../container/AllUsers';
-import UserContainer from '../container/UserContainer';
-import AllComments from '../container/AllComments';
-import PostContainer from '../container/PostContainer';
+import Home from '../containers/home/Home';
+import AllUsers from '../containers/users/AllUsers';
+import UserContainer from '../containers/users/UserContainer';
+import AllComments from '../containers/comments/AllComments';
+import PostContainer from '../containers/posts/PostContainer';
 import PostsSearch from '../components/posts/PostsSearch';
 
 export const ROUTES = {
@@ -12,11 +11,6 @@ export const ROUTES = {
     Component: Home,
     linkTo:() => '/'
   },
-  // REGISTERED_USER:{
-  //   path:'/',
-  //   Component: RegisterUser,
-  //   linkTo:() => '/register'
-  // }, 
   ALL_USERS:{
     path:'/users',
     Component: AllUsers,

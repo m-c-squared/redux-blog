@@ -1,16 +1,16 @@
 import { connect } from 'react-redux';
 import React, { PureComponent } from 'react';
-import PostDetail from '../components/posts/PostDetail';
-import { getPostById } from '../selectors/posts';
-import { fetchPost } from '../actions/posts';
-import { resetState } from '../actions/common';
+import UserDetail from '../../components/user/UserDetail';
+import { getUserById } from '../../selectors/user';
+import { fetchUser } from '../../actions/users';
+import { resetState } from '../../actions/common';
 import PropTypes from 'prop-types';
-import { getAllComments } from '../selectors/comments';
-import { fetchPostComments } from '../actions/comments';
+import { fetchUserPosts } from '../../actions/posts';
+import { getAllPosts } from '../../selectors/posts';
 
-class PostContainer extends PureComponent {
+class UserContainer extends PureComponent {
   static propTypes = {
-    postDetail: PropTypes.object.isRequired,
+    userDetail: PropTypes.object.isRequired,
     fetch: PropTypes.func.isRequired,
     match: PropTypes.object.isRequired,
     resetStateFunc: PropTypes.func.isRequired
@@ -32,21 +32,21 @@ class PostContainer extends PureComponent {
 
   render() {
     return (
-      <PostDetail {...this.props} />
+      <UserDetail {...this.props} />
     );
   }
 }
 
 
 const mapStateToProps = (state) => ({
-  postDetail: getPostById(state),
-  comments: getAllComments(state)
+  userDetail: getUserById(state),
+  posts: getAllPosts(state)
 });
 
 const mapDispatchToProps = (dispatch, props) => ({
   fetch() {
-    dispatch(fetchPost(props.match.params.id));
-    dispatch(fetchPostComments(props.match.params.id));
+    dispatch(fetchUser(props.match.params.id));
+    dispatch(fetchUserPosts(props.match.params.id));
   },
   resetStateFunc() {
     dispatch(resetState());
@@ -56,4 +56,4 @@ const mapDispatchToProps = (dispatch, props) => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(PostContainer);
+)(UserContainer);

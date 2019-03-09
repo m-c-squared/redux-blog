@@ -1,9 +1,9 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { getAllPosts } from '../selectors/posts';
-import Posts from '../components/posts/Posts';
-import { fetchPosts } from '../actions/posts';
+import { getAllPosts } from '../../selectors/posts';
+import Posts from '../../components/posts/Posts';
+import { fetchPosts } from '../../actions/posts';
 
 
 class AllPosts extends PureComponent {
