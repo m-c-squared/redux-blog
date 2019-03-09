@@ -2,11 +2,11 @@
 
 exports[`Posts matches a snapshot 1`] = `
 <ul
-  className="sc-gZMcBi gIIBCr"
+  className="sc-jTzLTM hsiwio"
 >
   <li>
     <a
-      className="sc-gqjmRU xwxcz"
+      className="sc-fjdhpX cAoLUX"
       href="/posts/1"
       onClick={[Function]}
     >
@@ -16,12 +16,12 @@ exports[`Posts matches a snapshot 1`] = `
       </p>
     </a>
     <p
-      className="sc-VigVT bblIYE"
+      className="sc-jzJRlG cYJEGP"
     />
   </li>
   <li>
     <a
-      className="sc-gqjmRU xwxcz"
+      className="sc-fjdhpX cAoLUX"
       href="/posts/21"
       onClick={[Function]}
     >
@@ -31,7 +31,7 @@ exports[`Posts matches a snapshot 1`] = `
       </p>
     </a>
     <p
-      className="sc-VigVT bblIYE"
+      className="sc-jzJRlG cYJEGP"
     />
   </li>
 </ul>

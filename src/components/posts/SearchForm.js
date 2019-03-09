@@ -10,6 +10,17 @@ const PostLabel = styles.label`
   justify-content: center;  
   margin-top: 1em;
   }
+  @media (min-width: 600px) {
+    color: rgb(93, 95, 96);
+    font-family: 'Roboto', san-serif;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;  
+    margin-top: 1em;
+    input {
+        font-size: 20px;
+    }
+  }
 `;
 
 const PostButton = styles.button`
@@ -22,6 +33,16 @@ const PostButton = styles.button`
   margin-left: auto;
   width: 50%;
   }
+  @media (min-width: 600px) {
+    font-family: 'Roboto', san-serif;
+    color: rgb(93, 95, 96);
+    margin-top: 1em;  
+    display: block;
+    font-size: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 10%;
+    }
 `;
 
 

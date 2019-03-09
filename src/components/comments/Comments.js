@@ -9,6 +9,11 @@ export const CommentsList = styles.ul`
   grid-template-columns: 33% 33% 33%; 
   padding: 0;
   }
+  @media (min-width: 600px) {
+    display: grid;
+    grid-template-columns: 33% 33% 33%; 
+    padding: 0;
+    }
 `;
 
 export const CommentsHeader = styles.h3`
