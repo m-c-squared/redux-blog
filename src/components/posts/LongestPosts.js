@@ -94,8 +94,7 @@ const Image = styles.div`
     }
     p {
       font-family: 'Roboto', san-serif;
-      line-height: 20px;
-      margin-top: 5em;
+      line-height: 20px;  
       color: rgb(93, 95, 96);
     }
   }
