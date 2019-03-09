@@ -2,32 +2,32 @@
 
 exports[`Header matches a snapshot 1`] = `
 <header
-  className="sc-fjdhpX fGiJGr"
+  className="sc-kAzzGY oWygE"
 >
   <nav>
     <a
-      className="sc-jTzLTM aTBmR"
+      className="sc-cSHVUG Rlhpe"
       href="/"
       onClick={[Function]}
     >
       Home
     </a>
     <a
-      className="sc-jTzLTM aTBmR"
+      className="sc-cSHVUG Rlhpe"
       href="/users"
       onClick={[Function]}
     >
       Users
     </a>
     <a
-      className="sc-jTzLTM aTBmR"
+      className="sc-cSHVUG Rlhpe"
       href="/comments"
       onClick={[Function]}
     >
       Comments
     </a>
     <a
-      className="sc-jTzLTM aTBmR"
+      className="sc-cSHVUG Rlhpe"
       href="/posts"
       onClick={[Function]}
     >
