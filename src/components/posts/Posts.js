@@ -50,7 +50,7 @@ const Posts = ({ posts }) => {
           <p> {post.title}</p>
         </PostItems>
         <PostDes>{post.body}</PostDes>
-      </li >
+      </li>
     );
   });
 

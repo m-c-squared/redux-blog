@@ -5,3 +5,5 @@ export const getAllUsers = state => {
 export const getUserById = state => { 
   return state.users.userDetail;
 };
+
+export const isLoading = state => state.users.loading;

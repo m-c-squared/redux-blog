@@ -26,7 +26,8 @@ describe('Users reducers', () => {
         name: 'mc2',
         username: 'usermc2',
         email: 'mc2email@com'
-      }
+      },
+      loading: false
     });
   });
 
@@ -59,7 +60,8 @@ describe('Users reducers', () => {
           name: 'Ervin Howell',
           username: 'Antonette',
           email: 'Shanna@melissa.tv'
-        }]
+        }],
+      loading: false
     });
   });
 });
